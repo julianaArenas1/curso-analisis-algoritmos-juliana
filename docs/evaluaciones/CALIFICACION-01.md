@@ -45,7 +45,7 @@
 - Las funciones tienen `type hints` y *docstrings* con formato Google.
 
 **Lo que puede mejorar:**
-- No se cumple del todo PEP 8: faltan saltos de línea al final de los archivos, hay una línea en blanco de más en `algoritmos.py` y los imports en `parte3_casos.py` y `parte4_complejidad.py` quedan después de código.
+- No se cumple del todo PEP 8: los imports en `parte3_casos.py` y `parte4_complejidad.py` quedan después de código.
 - `generar_casi_ordenado` falla con `n = 0`, y a `medir_escenario` y `medir_tiempo` les falta indicar el tipo del parámetro que recibe una función.
 
 ## 4. Calidad del análisis de las gráficas (17 / 20)
