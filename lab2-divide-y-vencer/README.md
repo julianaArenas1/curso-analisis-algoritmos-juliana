@@ -65,7 +65,13 @@ $$
 
 Con el método maestro, `a = 2`, `b = 2` y `f(n) = Θ(n)`. Como `n^(log₂2) = n` y `f(n)` tiene el mismo orden, se aplica el caso 2 y el resultado es `Θ(n log n)`.
 
-En fuerza bruta se usan dos ciclos para probar los posibles tramos. Como la suma se va acumulando y no se vuelve a calcular desde cero, el número de operaciones crece de forma cuadrática, por eso es `Θ(n²)`.
+En fuerza bruta, el ciclo exterior se ejecuta `n` veces. El ciclo interior no siempre hace `n` vueltas: primero hace `n`, luego `n - 1`, después `n - 2` y así hasta llegar a 1. Por eso, operaciones como acumular la suma y compararla se ejecutan en total:
+
+$$
+n + (n-1) + (n-2) + ... + 1
+$$
+
+Esta suma equivale a `n(n+1)/2`, por lo que al tomar el término que más crece la complejidad queda en `Θ(n²)`. Como la suma se va acumulando dentro del ciclo, no se vuelve a recorrer cada subarreglo desde cero.
 
 ## 2. Lo medido contra lo esperado
 
@@ -97,19 +103,19 @@ Por eso conviene dividir cuando esa estrategia realmente reduce la complejidad f
 
 ## 5. Concepto para la gerente
 
-De acuerdo con las pruebas, recomendaría divide y vencerás. Con `n = 4000`, fuerza bruta tardó `0,501808 segundos` y divide y vencerás `0,006938 segundos`.
+De acuerdo con las pruebas, recomendaría divide y vencerás. Con `n = 4000`, fuerza bruta tardó `0,405654 segundos` y divide y vencerás `0,007018 segundos`.
 
 Para estimar 1.000.000 de registros no hice una regla de tres lineal. En fuerza bruta escalé el tiempo según `n²`:
 
 $$
-0.501808
+0.405654
 \left(
 \frac{1\,000\,000}{4000}
 \right)^2
 $$
 
-El resultado es aproximadamente `31.363 segundos`, unas `8,71 horas`.
+El resultado es aproximadamente `25.353 segundos`, unas `7,04 horas`.
 
-Para divide y vencerás escalé según `n log n`, comparando el crecimiento entre los dos tamaños. El resultado estimado es aproximadamente `2,89 segundos`.
+Para divide y vencerás escalé según `n log n`, comparando el crecimiento entre los dos tamaños. El resultado estimado es aproximadamente `2,92 segundos`.
 
 Estos valores son una estimación, no una medición real. Aun así, la diferencia muestra que para series grandes divide y vencerás es una opción mucho más adecuada.

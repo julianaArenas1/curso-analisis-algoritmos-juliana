@@ -3,16 +3,14 @@
 import random
 import time
 
-import matplotlib
-
-matplotlib.use("Agg")
-
 from matplotlib import pyplot as plt
 
 from subarreglo import (
     subarreglo_fuerza_bruta,
     subarreglo_maximo,
 )
+
+plt.switch_backend("Agg")
 
 
 TAMANOS = [10, 50, 100, 500, 1000, 2000, 4000]

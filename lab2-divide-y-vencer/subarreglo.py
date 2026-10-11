@@ -31,6 +31,7 @@ def subarreglo_fuerza_bruta(
 
     return mejor_inicio, mejor_fin, mejor_suma
 
+
 def suma_cruzada(
     valores: list[float],
     inicio: int,
@@ -74,6 +75,7 @@ def suma_cruzada(
     suma_total = mejor_suma_izquierda + mejor_suma_derecha
 
     return mejor_inicio, mejor_fin, suma_total
+
 
 def subarreglo_maximo(
     valores: list[float],
