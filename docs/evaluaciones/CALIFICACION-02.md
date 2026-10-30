@@ -61,7 +61,7 @@ Muy buen trabajo: el código es correcto y el informe está bien organizado.
 - Las instrucciones de reproducción no dicen que hay que entrar a la carpeta `lab2-divide-y-vencer/` antes de ejecutar los comandos.
 
 ## ¿El código funciona?
-Sí. Las pruebas pasan, ambos algoritmos dan la misma suma en mis pruebas con listas aleatorias, y `medicion.py` corre y genera la gráfica sin errores.
+Sí. Las pruebas pasan, ambos algoritmos dan la misma suma en listas aleatorias, y `medicion.py` corre y genera la gráfica sin errores.
 
 ## Para el próximo laboratorio
 - Copie en el informe los números de la misma corrida que generó la gráfica publicada.
